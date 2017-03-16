@@ -7,4 +7,5 @@
     <string name="button">Dividieren</string>
     <string name="entwickler">Programmiert von Trattnig Sebastian</string>
     <string name="Fehler">Div / 0 Nicht möglich !</string>
+    <string name="Fehler2">Falsche Eingabe!</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.sebit.se2einzelphase;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,15 +20,18 @@ public class MainActivity extends AppCompatActivity {
         EditText Objekt02 = (EditText) findViewById(R.id.zahl02);
         EditText Objekt03 = (EditText) findViewById(R.id.zahl03);
 
+        try {
+
         Double nummer01 = Double.parseDouble(Objekt01.getText().toString());  // hier wird mit getText auf objekt zugegriffen und mit .toString auf string gewandelt
         Double nummer02 = Double.parseDouble(Objekt02.getText().toString());  // danach expliziete umwandlung in Double Wert
 
-        try {
 
-            Objekt03.setText(String.valueOf(nummer01 / nummer02));
 
-        } catch (ArithmeticException e) {
-            Objekt03.setText("Div / 0 nicht möglich! ");
+                Objekt03.setText(String.valueOf(nummer01 / nummer02));
+
+
+        } catch (Exception e) {
+            Objekt03.setText("Falsche Eingabe");
         }
     }
 }
